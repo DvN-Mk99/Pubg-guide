@@ -1,0 +1,208 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUBG Guide: Problem Solver & Conqueror Tips</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #ffcc00;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #ffcc00;
+            color: #000;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 15px;
+            cursor: pointer;
+        }
+
+        .content {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #1a1a1a;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 255, 0, 0.1);
+            text-align: left;
+        }
+
+        h2 {
+            color: #f1c40f;
+        }
+
+        .instructions, .tips {
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        .tips {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #444;
+            border-radius: 10px;
+        }
+
+        .tips h3 {
+            color: #f1c40f;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 10px;
+            background-color: #ffcc00;
+            color: #000;
+        }
+
+        a {
+            color: #f1c40f;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #e2b807;
+        }
+
+        .search-container {
+            margin: 20px 0;
+        }
+
+        .search-container input {
+            padding: 10px;
+            width: 80%;
+            border: 2px solid #ffcc00;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .search-container button {
+            padding: 10px 20px;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 5px;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .search-container button:hover {
+            background-color: #e6b800;
+        }
+
+        .download-link {
+            display: block;
+            margin-top: 20px;
+            font-size: 20px;
+            color: #ffcc00;
+            text-decoration: underline;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>PUBG Guide: Problem Solver & Conqueror Tips</h1>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showContact()">Contact Us</a>
+        <a href="#">Home</a>
+        <a href="#">FAQ</a>
+    </nav>
+
+    <div class="content">
+        <h2>Search for PUBG Fixes</h2>
+        <div class="search-container">
+            <input type="text" placeholder="Enter your question or issue..." id="searchInput">
+            <button onclick="search()">Search</button>
+        </div>
+
+        <p id="result"></p>
+
+        <div id="conquerorInfo" class="hidden">
+            <h2>Step-by-Step Instructions to Hit Conqueror</h2>
+            <div class="instructions">
+                <p><strong>Step 1:</strong> Choose the Right Mode. Focus on Solo or Duo modes for faster rank climbing.</p>
+                <p><strong>Step 2:</strong> Play Smart, Not Aggressive. Prioritize survival over kills, and stay in safe zones.</p>
+                <p><strong>Step 3:</strong> Play at Peak Times. Rank points are higher during peak times when there’s more competition.</p>
+                <p><strong>Step 4:</strong> Use Vehicles for Rotations. Stay mobile and avoid unnecessary fights until the endgame.</p>
+                <p><strong>Step 5:</strong> Master the Maps. Knowing every nook and cranny of Erangel, Miramar, and Sanhok can give you the edge.</p>
+                <p><strong>Step 6:</strong> Play with High-Skilled Teammates. Good team coordination is key in duo or squad modes.</p>
+            </div>
+
+            <h3>Requirements to Hit Conqueror:</h3>
+            <ul>
+                <li>You need to be at least Ace rank.</li>
+                <li>You must be in the top 500 players.</li>
+                <li>You can check your rank by clicking on the Season button and then clicking on the badge of your rank.</li>
+            </ul>
+
+            <div class="tips">
+                <h3>Additional Tips:</h3>
+                <ul>
+                    <li>Use headphones for better sound awareness.</li>
+                    <li>Pick safe drop locations with fewer players.</li>
+                    <li>Always carry enough healing items and grenades.</li>
+                    <li>Track your performance and adjust strategies accordingly.</li>
+                </ul>
+            </div>
+
+            <a class="download-link" href="https://www.pubgmobile.com/en-US/download/" target="_blank">
+                Download PUBG Mobile
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p id="contactEmail" class="hidden">Contact us at: crabk288@gmail.com</p>
+        <p>&copy; 2024 PUBG Guide: Problem Solver & Conqueror Tips</p>
+    </footer>
+
+    <script>
+        function search() {
+            var query = document.getElementById("searchInput").value.toLowerCase();
+            var result = document.getElementById("result");
+            var conquerorInfo = document.getElementById("conquerorInfo");
+
+            // Simple search logic for demonstration purposes
+            if(query.includes("conqueror") || query.includes("rank")) {
+                result.innerHTML = "";
+                conquerorInfo.classList.remove("hidden");
+            } else if(query.includes("lag")) {
+                result.innerHTML = "Try reducing the graphics settings or checking your internet connection.";
+                conquerorInfo.classList.add("hidden");
+            } else if(query.includes("login")) {
+                result.innerHTML = "Make sure your game is up-to-date and that you have a stable internet connection.";
+                conquerorInfo.classList.add("hidden");
+            } else {
+                result.innerHTML = "Sorry, no fix found. Please try a different search.";
+                conquerorInfo.classList.add("hidden");
+            }
+        }
+
+        function showContact() {
+            var contactEmail = document.getElementById("contactEmail");
+            contactEmail.classList.toggle("hidden");
+        }
+    </script>
+
+</body>
+</html>
